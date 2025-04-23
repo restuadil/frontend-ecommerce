@@ -37,7 +37,7 @@ export const SideBar = () => {
   const router = useRouter();
 
   return (
-    <aside className="flex h-screen w-64 flex-col border-r border-gray-200 bg-white shadow-sm">
+    <aside className="flex h-screen w-64 flex-col border-r border-gray-200 bg-white shadow-sm fixed z-10">
       {/* Logo Section */}
       <div className="flex h-16 items-center justify-center border-b border-gray-200 px-4">
         <h1 className="text-xl font-bold text-gray-800">
