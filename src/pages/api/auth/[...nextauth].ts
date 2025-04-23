@@ -62,7 +62,7 @@ export default NextAuth({
       token: IJWTExtended;
     }) {
       session.user = token.user;
-      session.accesToken = token.user?.accessToken;
+      session.accessToken = token.user?.accessToken;
 
       return session;
     },
