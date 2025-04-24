@@ -1,9 +1,9 @@
 import { endpoints } from "@/config/endpoints";
 import instance from "@/config/instance";
-import { ICateoryParams } from "@/types/category";
+import { ICategoryParams } from "@/types/category";
 
 export const CategoryService = {
-  getAll: (params: ICateoryParams) =>
+  getAll: (params: ICategoryParams) =>
     instance.get(endpoints.getAllCateogries, {
       params,
     }),
