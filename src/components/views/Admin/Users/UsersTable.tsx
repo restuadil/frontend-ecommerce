@@ -9,27 +9,27 @@ import {
   TableBody,
 } from "@heroui/react";
 import { FiEdit, FiTrash2 } from "react-icons/fi";
-import { Pagination, User } from "./useUser";
 import { cn } from "@/utils/cn";
+import { IPagination } from "@/types/web";
+import { IUser } from "@/types/user";
 
 interface UserTableProps {
-  data: User[];
-  pagination: Pagination;
+  data: IUser[];
+  pagination: IPagination;
   currentPage: number;
   onPageChange: (page: number) => void;
+  currentLimit: number;
 }
 
-export const UserTable = ({
+export const UsersTable = ({
   data,
   pagination,
   currentPage,
   onPageChange,
+  currentLimit,
 }: UserTableProps) => {
-  const startNumber = (currentPage - 1) * pagination.limit + 1;
-  const endNumber = Math.min(
-    currentPage * pagination.limit,
-    pagination.totalData
-  );
+  const startNumber = (currentPage - 1) * currentLimit + 1;
+  const endNumber = Math.min(currentPage * currentLimit, pagination.totalData);
   return (
     <div>
       <Table aria-label="Users table" className="text-slate-500">

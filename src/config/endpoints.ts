@@ -3,4 +3,6 @@ export const endpoints = {
   register: "/auth/register",
   profile: "/auth/profile",
   getAllUsers: "/users",
+  getAllCateogries: "/category",
+  getOneCategory: "/categories/:id",
 };
